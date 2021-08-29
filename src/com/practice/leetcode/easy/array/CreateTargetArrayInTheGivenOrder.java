@@ -27,7 +27,7 @@ public class CreateTargetArrayInTheGivenOrder {
 		for (int res1 : list) {
 			res[indexRes++] = res1;
 		}
-//		System.out.println(Arrays.toString(res));
+		System.out.println(Arrays.toString(res));
 		return res;
 	}
 
