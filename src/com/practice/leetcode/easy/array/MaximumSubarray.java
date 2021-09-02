@@ -6,8 +6,8 @@ import org.junit.Test;
 public class MaximumSubarray {
 	@Test
 	public void test1() {
-		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
-//		int[] nums = {-2,2,5,-11,6};
+//		int[] nums = {-2,1,-3,4,-1,2,1,-5,4};
+		int[] nums = {-2,2,5,-11,6};
 //		Assert.assertEquals(toFindMaximumSubarrayUsingBruteForce(nums), 6);
 		Assert.assertEquals(toFindMaximumSubarrayUsingKadane_sAlgo(nums), 6);
 		
