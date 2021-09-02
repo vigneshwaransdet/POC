@@ -1,6 +1,8 @@
 package com.practice.leetcode.easy.array;
 
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.junit.Assert;
@@ -26,14 +28,23 @@ public class ContainsDuplicate {
 	}
 
 	private boolean toFindContainsDuplicate(int[] nums) {
-		Set<Integer> set = new HashSet<>();
-		for (int i = 0; i < nums.length; i++) {
-			if(!set.contains(nums[i])) {
-				set.add(nums[i]);
-			}
-			else return true;
-		}
+//		Using Set:
+//		Set<Integer> set = new HashSet<>();
+//		for (int i = 0; i < nums.length; i++) {
+//			if(!set.contains(nums[i])) {
+//				set.add(nums[i]);
+//			}
+//			else return true;
+//		}
 		
+//		Using Map:
+		Map<Integer,Integer> map = new HashMap<>();
+		for (int i = 0; i < nums.length; i++) {
+			map.put(nums[i], map.getOrDefault(nums[i], 0)+1);
+			if((map.get(nums[i]))>1) {
+				return true;
+			}
+		}
 		return false;
 	}
 
